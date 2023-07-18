@@ -5,8 +5,8 @@
 
         Location:
         <ul>
-            <li *ngFor="let location of ['front middle', 'front left', 'front right', 'right side', 'dashboard',
-            'left side', 'rear left', 'rear middle', 'rear right']">
+            <li *ngFor="let location of ['front left', 'front middle', 'front right', 'left side', 'dashboard',
+            'right side', 'rear left', 'rear middle', 'rear right']">
               <span *ngIf="data.location === location">&#10003;</span> {{ location }}
             </li>
           </ul>
