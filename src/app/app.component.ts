@@ -1,31 +1,47 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import {NgIf, NgFor} from '@angular/common';
+import {MatDialog, MAT_DIALOG_DATA, MatDialogModule} from '@angular/material/dialog';
+
+
+export interface DialogData {
+  location: 'front middle' | 'front left' | 'front right' |
+  'left side' | 'right side' | 'dashboard' | 'rear middle' | 
+  'rear left' | 'rear right';
+}
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'picture-upload-grid';
-
+  title='product';
+  constructor(public dialog: MatDialog) {}
 
   logName(location: string) {
-    console.log("clicked on: ", location);
+    this.dialog.open(CameraDialogue, {
+      data: {
+        location: location,
+      },
+    });
+    console.log(location, 'passed...');
+    
   }
 
-  onButtonClick(event: Event) {
-    const target = event.target as HTMLElement;
-    if (target.tagName === 'button') {
-      const buttonText = target.textContent?.trim();
-      if (buttonText) {
-        this.handleButtonClick(buttonText);
-      }
-    }
-  }
 
-  handleButtonClick(buttonText: string) {
-    // Your logic to handle the button click goes here
-    console.log(`Button with text "${buttonText}" was clicked.`);
-  }
+  // logName(location: string) {
+  //   console.log("clicked on: ", location);
+  // }
 
+}
+
+@Component({
+  selector: 'camera-dialogue',
+  templateUrl: 'camera-dialogue.html',
+  standalone: true,
+  imports: [MatDialogModule, NgIf, NgFor],
+})
+export class CameraDialogue {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 }

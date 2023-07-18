@@ -1,9 +1,9 @@
 <h1>Main</h1>
 
 
-<div class="grid" (click)="onButtonClick($event)">
+<div class="grid" >
   <div class="cell" style="background-color: green">
-  <button mat-raised-button class="cell-button" (click)="logName('front left')">
+  <button mat-raised-button matTooltip="front left" class="cell-button" (click)="logName('front left')">
     <mat-icon></mat-icon>
   </button>
   
@@ -58,10 +58,3 @@
 </div>
 </div>
 
-<div *ngFor="let i of [].constructor(9); let j = index">
-  <div>
-    <button mat-flat-button>
-      Button
-    </button>
-  </div>
-</div>
