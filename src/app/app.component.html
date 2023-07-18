@@ -1,59 +1,67 @@
 <h1>Main</h1>
 
 
-<div class="grid">
+<div class="grid" (click)="onButtonClick($event)">
   <div class="cell" style="background-color: green">
-  <button mat-raised-button class="cell-button">
+  <button mat-raised-button class="cell-button" (click)="logName('front left')">
     <mat-icon></mat-icon>
   </button>
   
   </div>
 
   <div class="cell" style="background-color: red">
-    <button mat-raised-button class="cell-button" (click)="logName()">
+    <button mat-raised-button class="cell-button" (click)="logName('front middle')">
       <mat-icon>keyboard_arrow_up</mat-icon>
     </button>
 
   </div>
 
   <div class="cell" style="background-color: blue">
-    <button mat-raised-button class="cell-button"></button>
+    <button mat-raised-button class="cell-button" (click)="logName('front right')"></button>
 
   </div>
 
   <div class="cell" style="background-color: yellow">
-    <button mat-raised-button class="cell-button">
+    <button mat-raised-button class="cell-button" (click)="logName('left side')">
       <mat-icon>keyboard_arrow_left</mat-icon>
     </button>
 
   </div>
 
   <div class="cell" style="background-color: brown">
-    <button mat-raised-button class="cell-button"></button>
+    <button mat-raised-button class="cell-button" (click)="logName('dashboard')"></button>
 
   </div>
 
   <div class="cell" style="background-color: magenta">
-    <button mat-raised-button class="cell-button">
+    <button mat-raised-button class="cell-button" (click)="logName('right side')">
       <mat-icon>keyboard_arrow_right</mat-icon>
     </button>
 
   </div>
 
   <div class="cell" style="background-color: turquoise">  
-    <button mat-raised-button class="cell-button"></button>
+    <button mat-raised-button class="cell-button" (click)="logName('rear left')"></button>
 
   </div>
   
   <div class="cell" style="background-color: blueviolet">
-    <button mat-raised-button class="cell-button">
+    <button mat-raised-button class="cell-button" (click)="logName('rear middle')">
       <mat-icon>keyboard_arrow_down</mat-icon>
     </button>
 
   </div>
 
   <div class="cell" style="background-color: orange">  
-    <button mat-raised-button class="cell-button"></button>
+    <button mat-raised-button class="cell-button" (click)="logName('rear right')"></button>
 
 </div>
+</div>
+
+<div *ngFor="let i of [].constructor(9); let j = index">
+  <div>
+    <button mat-flat-button>
+      Button
+    </button>
+  </div>
 </div>

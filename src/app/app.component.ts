@@ -9,7 +9,23 @@ export class AppComponent {
   title = 'picture-upload-grid';
 
 
-  logName() {
-    console.log("clicked!");
+  logName(location: string) {
+    console.log("clicked on: ", location);
   }
+
+  onButtonClick(event: Event) {
+    const target = event.target as HTMLElement;
+    if (target.tagName === 'button') {
+      const buttonText = target.textContent?.trim();
+      if (buttonText) {
+        this.handleButtonClick(buttonText);
+      }
+    }
+  }
+
+  handleButtonClick(buttonText: string) {
+    // Your logic to handle the button click goes here
+    console.log(`Button with text "${buttonText}" was clicked.`);
+  }
+
 }
