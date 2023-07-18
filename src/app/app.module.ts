@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon'; 
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -12,6 +13,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     MatCardModule,
     MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
