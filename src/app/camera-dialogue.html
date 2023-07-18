@@ -1,11 +1,43 @@
-<h1 mat-dialog-title>Favorite Animal</h1>
-<div mat-dialog-content>
-  Picture Location:
-  <ul>
-      <li *ngFor="let location of ['front middle', 'front left', 'front right', 'right side', 'dashboard',
-      'left side', 'rear left', 'rear middle', 'rear right']">
-        <span *ngIf="data.location === location">&#10003;</span> {{ location }}
-      </li>
-    </ul>
+<h1 mat-dialog-title>Upload Pictures</h1>
+<div mat-dialog-content class="content">
+
+    <div class="loc">
+
+        Location:
+        <ul>
+            <li *ngFor="let location of ['front middle', 'front left', 'front right', 'right side', 'dashboard',
+            'left side', 'rear left', 'rear middle', 'rear right']">
+              <span *ngIf="data.location === location">&#10003;</span> {{ location }}
+            </li>
+          </ul>
+    </div>
+    <div class="pictures">
+        <button mat-raised-button>Add Pictures</button>
+    </div>
 </div>
 
+<style>
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        width: 100%;
+    }
+    .loc {
+        display: grid;
+        border-width: 1px;
+        border-color: white;
+        border-style: solid;
+        border-radius: 5%;
+        padding: 2%;
+        width: 100%;
+    }
+    .pictures {
+        display: grid;
+    }
+    button {
+        justify-self: center;
+        align-self: center;
+        width: 20%;
+        height: 15%;
+    }
+</style>

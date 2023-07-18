@@ -1,6 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import {NgIf, NgFor} from '@angular/common';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogModule} from '@angular/material/dialog';
+import { MatButton } from '@angular/material/button';
 
 
 export interface DialogData {
