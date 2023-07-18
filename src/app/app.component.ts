@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'picture-upload-grid';
 
 
-  name() {
+  logName() {
     console.log("clicked!");
   }
 }
