@@ -13,6 +13,12 @@
     margin-bottom: 5px;
   } */
 
+
+  .container {
+    justify-content: center;
+    align-content: center;
+  }
+
   .grid {
     max-height: 50%;
     margin: 2%;
@@ -20,6 +26,10 @@
     grid-template-columns: repeat(3, 10%);
     grid-template-rows: repeat(3, 1fr); 
     gap: 10px; 
+
+    width: 100%;
+    align-self: center;
+    justify-self: center;
   }
   
   .cell {

@@ -27,6 +27,7 @@ export class AppComponent {
       },
     });
     console.log(location, 'passed...');
+    console.warn(`${location} clicked`);
   }
 }
 

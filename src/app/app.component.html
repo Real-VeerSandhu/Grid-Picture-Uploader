@@ -1,7 +1,10 @@
-<h1 style="justify-self: center; align-self: center; justify-content: center; align-content: center;">Main</h1>
+<h1 style="justify-self: center; align-self: center; justify-content: center; align-content: center; text-align: center;">Main</h1>
 
 
-<div class="grid" >
+<div class="container" >
+
+  <div class="grid">
+
   <div class="cell" style="background-color: green">
     <button mat-raised-button matTooltip="front left" class="cell-button" (click)="logName('front left')">
       <mat-icon></mat-icon>
@@ -49,6 +52,8 @@
 
   <div class="cell" style="background-color: orange">  
     <button mat-raised-button matTooltip="rear right" class="cell-button" (click)="logName('rear right')"></button>
+  </div>
+
   </div>
 </div>
 
