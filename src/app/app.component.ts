@@ -10,7 +10,6 @@ export interface DialogData { // picture location options
   'rear left' | 'rear right';
 }
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -30,7 +29,6 @@ export class AppComponent {
     console.warn(`${location} clicked`);
   }
 }
-
 
 // Dialogue Component
 @Component({
