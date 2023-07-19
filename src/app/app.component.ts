@@ -39,4 +39,8 @@ export class AppComponent {
 })
 export class CameraDialogue {
   constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+  runCamera() {
+    alert('camera')
+  }
 }
