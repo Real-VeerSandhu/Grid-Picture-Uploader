@@ -31,6 +31,8 @@ export class AppComponent {
   }
 }
 
+
+// Dialogue Component
 @Component({
   selector: 'camera-dialogue',
   templateUrl: 'camera-dialogue.html',
