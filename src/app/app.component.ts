@@ -29,12 +29,6 @@ export class AppComponent {
     console.log(location, 'passed...');
     
   }
-
-
-  // logName(location: string) {
-  //   console.log("clicked on: ", location);
-  // }
-
 }
 
 @Component({
