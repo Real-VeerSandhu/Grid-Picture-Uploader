@@ -50,7 +50,7 @@ export class CameraDialogue {
 
   takePhoto(id: number) {
     for (let i = 0; i < id; i++) {
-      console.log(id)
+      console.log(i);
     }
   }
 }
