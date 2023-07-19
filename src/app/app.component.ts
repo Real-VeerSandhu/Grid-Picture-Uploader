@@ -4,7 +4,7 @@ import {MatDialog, MAT_DIALOG_DATA, MatDialogModule} from '@angular/material/dia
 import { MatButton } from '@angular/material/button';
 
 
-export interface DialogData { // picture options
+export interface DialogData { // picture location options
   location: 'front middle' | 'front left' | 'front right' |
   'left side' | 'right side' | 'dashboard' | 'rear middle' | 
   'rear left' | 'rear right';
