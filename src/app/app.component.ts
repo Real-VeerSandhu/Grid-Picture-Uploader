@@ -47,4 +47,10 @@ export class CameraDialogue {
     console.log('camera passed...');
     
   }
+
+  takePhoto(id: number) {
+    for (let i = 0; i < id; i++) {
+      console.log(id)
+    }
+  }
 }
